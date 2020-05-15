@@ -3,6 +3,7 @@ begin-app
 
 @http
 post /graphql
+get /playground
 
 @tables
 data

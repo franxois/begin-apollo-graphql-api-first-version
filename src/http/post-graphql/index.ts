@@ -13,7 +13,13 @@ let resolvers = {
   },
 };
 
-let server = new ApolloServer({ typeDefs, resolvers });
+let server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  playground: {
+    endpoint: "/graphql",
+  },
+});
 let handler = server.createHandler();
 
 exports.handler = function (event, context, callback) {
